@@ -1,0 +1,5 @@
+REGION: us-west-1
+KEYNAME:  kartikmore
+IMAGE: ami-04b6c97b14c54de18
+SGNAME: DRSG
+SUBID: subnet-0793d91f8a563a183 

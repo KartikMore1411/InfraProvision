@@ -1,13 +1,14 @@
 ---
+- name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
+  include_vars:
+    file: "vars/{{ PROJECT }}_{{ ENV }}.yml" 
 # tasks file for CREATEEC2
 - ec2 :
-    region : us-west-1
-    key_name: kartikmore
+    region : "{{ REGION }}"
+    key_name: "{{ KEYNAME }}"
     instance_type: t2.micro
-    image: ami-04b6c97b14c54de18
+    image: "{{ IMAGE }}"
     wait: yes
-    group: "DEVSG"
-    count: 1
-    vpc_subnet_id: subnet-0793d91f8a563a183
+    group: "{{ SGNAME }}"
+    vpc_subnet_id: "{{ SUBID }}"
     assign_public_ip: yes
-
