@@ -1,0 +1,13 @@
+---
+# tasks file for CREATEEC2
+- ec2 :
+    region : us-west-1
+    key_name: kartikmore
+    instance_type: t2.micro
+    image: ami-04b6c97b14c54de18
+    wait: yes
+    group: "DEVSG"
+    count: 1
+    vpc_subnet_id: subnet-0793d91f8a563a183
+    assign_public_ip: yes
+
